@@ -62,7 +62,7 @@ class CharCNNZhang(object):
             x = ThresholdedReLU(self.threshold)(x)
             x = Dropout(self.dropout_p)(x)
         # Output layer
-        predictions = Dense(self.num_of_classes, activation='softmax')(x)
+        predictions = Dense(1, activation='sigmoid')(x)
         # Build and compile model
         model = Model(inputs=inputs, outputs=predictions)
         self.model = model
