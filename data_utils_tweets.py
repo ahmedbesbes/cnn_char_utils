@@ -76,7 +76,7 @@ class Data(object):
         for c, s in tqdm(batch_texts):
             batch_indices.append(self.str_to_indexes(c))
             # c = int(c) - 1
-            classes.append(one_hot[int(s)])
+            classes.append(int(s))
         return np.asarray(batch_indices, dtype='int64'), np.asarray(classes)
 
     def str_to_indexes(self, s):
