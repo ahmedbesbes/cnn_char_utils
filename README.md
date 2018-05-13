@@ -1,2 +1,4 @@
-# cnn_char_utils
+# Character Based CNN
+
+- Work in progress.
 
